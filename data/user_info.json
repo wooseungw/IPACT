@@ -5,9 +5,9 @@
     "gender":"male",
     "education":"highschool",
     "merry":"married",
-    "childs":1,
+    "children":1,
     "religion": true,
     "income":100000,
-    "ecomomy_states":"normal",
+    "economy_states":"normal",
     "health_states":"bad"
 }
