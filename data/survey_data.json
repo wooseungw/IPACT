@@ -1,0 +1,41 @@
+{
+    "personal_information": {
+        "name": "김오순",
+        "phone": "010-3004-4366",
+        "age": 2,
+        "gender": false,
+        "merry": 3,
+        "living_arrangement": true,
+        "children": 2,
+        "religion": 0,
+        "economiy_states": 1,
+        "health_states": 1
+    },
+    "objective_questions": {
+        "Family": [
+            {"q_num": 1, "question": "가족과의 대화 시간이 부족하다고 느낀다.", "weight": 1, "user_choose": 2},
+            {"q_num": 2, "question": "가족과 함께 있는 시간이 충분하지 않다고 생각한다.", "weight": 1, "user_choose":  2},
+            {"q_num": 3, "question": "가족이 나를 필요로 하지 않는다고 느낀다.", "weight": 1, "user_choose": 3},
+            {"q_num": 4, "question": "가족과 함께 보내는 시간이 즐겁지 않다.", "weight": 1, "user_choose": 1}
+        ],
+        "Social": [
+            {"q_num": 1, "question": "친구와 연락하는 횟수가 줄어들고 있다.", "weight": 1, "user_choose": 4},
+            {"q_num": 2, "question": "친구와 만나는 시간이 줄어들고 있다.", "weight": 1, "user_choose": 4}, 
+            {"q_num": 3, "question": "내가 속한 모임이나 단체에서 소외감을 느낀다.", "weight": 1, "user_choose": 4},
+            {"q_num": 4, "question": "새로운 사람을 만날 기회가 거의 없다.", "weight": 1, "user_choose": 3}
+        ],
+        "Belonging": [
+            {"q_num": 1, "question": "주변 사람들에게 소외감을 느낀다.", "weight": 1, "user_choose": 3},
+            {"q_num": 2, "question": "내가 중요한 존재라고 느껴지지 않는다.", "weight": 1, "user_choose": 3},
+            {"q_num": 3, "question": "외출 후에도 혼자 있는 기분이 든다.", "weight": 1, "user_choose": 2},
+            {"q_num": 4, "question": "누군가와 진심으로 이야기할 기회가 없다.", "weight": 1, "user_choose": 3},
+            {"q_num": 5, "question": "도움을 요청할 사람이 없다.", "weight": 1, "user_choose": 4},
+            {"q_num": 6, "question": "나의 의견을 들어주는 사람이 없다.", "weight": 1, "user_choose": 4}
+        ]
+    },
+    "subjective_questions": {
+        "loneliness_situations": "외출 후 집에오면 혼자일떄 외로움을 느낀다.",
+        "realization_of_loneliness": "외롭다는 느낌이 들고 혼자 밥을 먹을 때 먹기 싫을 때가 많다.",
+        "needs_during_loneliness": "친구,가족,돈"
+    }
+}
