@@ -78,7 +78,7 @@ class GPT:
         Returns:
             str: 생성된 대화 결과입니다.
         """
-        messages = [{"type": "text", "text": text_prompt},]
+        messages = [{"type": "text", "text": text_prompt}]
         if audio_list:
             for audio in audio_list:
                 messages.append({"type": "text", "text": self._audio_transcript(audio)})
