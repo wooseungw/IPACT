@@ -4,9 +4,30 @@ from dotenv import load_dotenv
 from openai import OpenAI
 from gpt_class import GPT
 import time
+import json
+
+class User:
+    def __init__(self, info_dir):
+        # Read the JSON file
+        with open(info_dir, 'r') as file:
+            data = json.load(file)
+        self.name = data['name']
+        self.phone = data['phone']
+        self.age = data['age']
+        self.gender = data['gender']
+        self.education = data['education']
+        self.merry = data['merry']
+        self.children = data['children']
+        self.religion = data['religion']
+        self.income = data['income']
+        self.economy_states = data['economy_states']
+        self.health_states = data['health_states']
+        
+# Specify the path to the JSON file
+info_dir = 'data/user_info.json'
+user = User(info_dir)
 
 if "OPENAI_API" not in st.session_state:
-    
     st.session_state["OPENAI_API"] = os.getenv("OPENAI_API_KEY") if os.getenv("OPENAI_API_KEY") else ""
 # 기본 모델을 설정합니다.
 if "model" not in st.session_state:
@@ -16,7 +37,8 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
 if "sys_prompt" not in st.session_state:
-    st.session_state["sys_prompt"] = open("data/prompt_output.txt", "r").read()
+    st.session_state["sys_prompt"] = f"사용자의 인적정보 = 이름: {user.name}, 나이: {user.age}, 성별: {user.gender}, 학력: {user.education}, 결혼 여부: {user.merry}, 자녀 수: {user.children}, 종교: {user.religion}, 소득: {user.income}, 인지된 경제 상태: {user.economy_states}, 인지된 건강 상태: {user.health_states}" + open("data/prompt_output.txt", "r").read()
+ 
 
 st.session_state
 
