@@ -1,0 +1,105 @@
+{
+  "personal_information": {
+    "name": "유순례",
+    "phone": "010-5388-0671",
+    "age": 1,
+    "gender": "female",
+    "merry": 3,
+    "living_arrangement": true,
+    "children": 3,
+    "religion": 1,
+    "economy_states": 1,
+    "health_states": 0
+  },
+  "object_data": [
+    {
+      "q_num": 1,
+      "question": "나는 가족들과 매일 대화를 나눈다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 2,
+      "question": "나는 가깝게 지내는 사람들이 있다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 3,
+      "question": "나는 쓸모없는 사람이라고 느껴진다.",
+      "weight": 1,
+      "user_choose": 4
+    },
+    {
+      "q_num": 4,
+      "question": "나를 이해해주는 사람이 있다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 5,
+      "question": "사람들은 나와 겉으로만 어울리는 것 같다.",
+      "weight": 1,
+      "user_choose": 4
+    },
+    {
+      "q_num": 6,
+      "question": "나는 자녀에게 고민을 이야기할 수 있다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 7,
+      "question": "나는 주변 사람과의 관계가 만족스럽다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 8,
+      "question": "가족들은 나를 예전처럼 대해주지 않는다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 9,
+      "question": "친구나 이웃들은 나에게 관심을 둔다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 10,
+      "question": "내가 아플 때 나를 보살펴줄 가족이 있다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 11,
+      "question": "나는 의지할 친구가 있다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 12,
+      "question": "나는 온종일 할 일 없이 시간을 보낸다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 13,
+      "question": "나는 사회에서 필요한 사람이다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 14,
+      "question": "나는 가족에게 의지할 수 있다.",
+      "weight": 1,
+      "user_choose": 1
+    }
+  ],
+  "subjective_questions": {
+    "loneliness_situations": "혼자 있을 때 외로움을 느낀다.",
+    "realization_of_loneliness": "사람들과 이야기가 나누고 싶어 지나가는 사람들을 바라본다던지, 주변 사람들과 이야기하는 내 모습을 발견할 때",
+    "needs_during_loneliness": "나는 그나마 종교가 있다. 같은 교인들이 나를 찾아와주고 관심을 기울일 때, 자녀들이 매일 매일 전화로 안부를 묻고 사소한 이야기라도 나눌 수 있다. 주변 사람들과 비슷한 취미활동이 있으면 좋다."
+  }
+}

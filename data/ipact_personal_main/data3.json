@@ -1,0 +1,105 @@
+{
+  "personal_information": {
+    "name": "유정임",
+    "phone": "010-4388-8248",
+    "age": 1,
+    "gender": "female",
+    "merry": 3,
+    "living_arrangement": true,
+    "children": 3,
+    "religion": 0,
+    "economy_states": 2,
+    "health_states": 2
+  },
+  "object_data": [
+    {
+      "q_num": 1,
+      "question": "나는 가족들과 매일 대화를 나눈다.",
+      "weight": 1,
+      "user_choose": 2
+    },
+    {
+      "q_num": 2,
+      "question": "나는 가깝게 지내는 사람들이 있다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 3,
+      "question": "나는 쓸모없는 사람이라고 느껴진다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 4,
+      "question": "나를 이해해주는 사람이 있다.",
+      "weight": 1,
+      "user_choose": 4
+    },
+    {
+      "q_num": 5,
+      "question": "사람들은 나와 겉으로만 어울리는 것 같다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 6,
+      "question": "나는 자녀에게 고민을 이야기할 수 있다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 7,
+      "question": "나는 주변 사랑과의 관계가 만족스럽다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 8,
+      "question": "가족들은 나를 예전처럼 대해주지 않는다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 9,
+      "question": "친구나 이웃들은 나에게 관심을 둔다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 10,
+      "question": "내가 아플 때 나를 보살펴줄 가족이 있다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 11,
+      "question": "나는 의지할 친구가 있다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 12,
+      "question": "나는 온종일 할 일없이 시간을 보낸다.",
+      "weight": 1,
+      "user_choose": 3
+    },
+    {
+      "q_num": 13,
+      "question": "나는 사회에서 필요한 사람이다.",
+      "weight": 1,
+      "user_choose": 1
+    },
+    {
+      "q_num": 14,
+      "question": "나는 가족에게 의지할 수 있다.",
+      "weight": 1,
+      "user_choose": 1
+    }
+  ],
+  "subjective_questions": {
+    "loneliness_situations": "아플때, 자식들이 연락을 안했을떄, TV에서 슬픈일, 아픈 노인들 나올때",
+    "realization_of_loneliness": "이렇게 살아서 뭐하나? 아무 생각이 없을때, 하고 싶지 않을때",
+    "needs_during_loneliness": "주변사람들,가족들의 관심"
+  }
+}
