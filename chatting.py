@@ -38,9 +38,6 @@ if "chat_history" not in st.session_state:
 
 if "sys_prompt" not in st.session_state:
     st.session_state["sys_prompt"] = f"사용자의 인적정보 = 이름: {user.name}, 나이: {user.age}, 성별: {user.gender}, 학력: {user.education}, 결혼 여부: {user.merry}, 자녀 수: {user.children}, 종교: {user.religion}, 소득: {user.income}, 인지된 경제 상태: {user.economy_states}, 인지된 건강 상태: {user.health_states}" + open("data/prompt_output.txt", "r").read()
- 
-
-st.session_state
 
 def stream_data(response):
     for word in response.split(" "):
