@@ -12,7 +12,6 @@ class User:
         with open(info_dir, 'r') as file:
             data = json.load(file)
         self.name = data['personal_information']['name']
-        self.phone = data['personal_information']['phone']
         self.age = data['personal_information']['age']
         self.gender = data['personal_information']['gender']
         self.merry = data['personal_information']['merry']
@@ -22,7 +21,7 @@ class User:
         self.health_states = data['personal_information']['health_states']
         self.living_arrangement = data['personal_information']['living_arrangement']        
 # Specify the path to the JSON file
-info_dir = 'data/user_info.json'
+info_dir = 'data/ipact_personal_main/data3.json'
 user = User(info_dir)
 
 if "OPENAI_API" not in st.session_state:
@@ -35,12 +34,14 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
 if "sys_prompt" not in st.session_state:
+    with open("data/prompt_output.txt", "r") as file:
+        sys_prompt = file.read()
+    print(sys_prompt)
     personal_info="""
     #설문지 인적 정보 양식
     본 설문지의 인적 정보의 답변 값에 대한 숫자와 값을 일치시켰습니다. 괄호 안의 값을 참고하세요
     이름(name) : 00
     연령(age) : 0(65-74세) / 1(75-84세) / 2(85세 이상)
-    연락처(phone) : 000-0000-0000
     성별(gender) : male / female
     결혼 상태(merry) : 0(미혼) / 1(기혼) / 2(이혼/별거) / 3(사별)
     거주 형태(living_arrangement) : 0(혼자 거주) / 1(동거)
@@ -49,7 +50,7 @@ if "sys_prompt" not in st.session_state:
     지각된 경제 상태(economy_states): 0(나쁨) / 1(보통) / 2(좋음)
     지각된 건강 상태(health_states): 0(나쁨) / 1(보통) / 2(좋음)
     """
-    st.session_state["sys_prompt"] = personal_info+f"""
+    st.session_state["sys_prompt"] = sys_prompt + personal_info+f"""
         사용자의 인적정보 = 이름: {user.name},
         나이: {user.age}, 
         성별: {user.gender}, 
@@ -62,6 +63,7 @@ if "sys_prompt" not in st.session_state:
         
         \\
     """
+    print(st.session_state["sys_prompt"])
 
 def stream_data(response):
     for word in response.split(" "):
