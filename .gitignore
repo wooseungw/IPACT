@@ -1,4 +1,5 @@
 .env
 .DS_Store
+data/.DS_Store
 __pycache__/
 data0.py/

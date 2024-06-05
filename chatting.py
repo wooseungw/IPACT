@@ -11,18 +11,16 @@ class User:
         # Read the JSON file
         with open(info_dir, 'r') as file:
             data = json.load(file)
-        self.name = data['name']
-        self.phone = data['phone']
-        self.age = data['age']
-        self.gender = data['gender']
-        self.education = data['education']
-        self.merry = data['merry']
-        self.children = data['children']
-        self.religion = data['religion']
-        self.income = data['income']
-        self.economy_states = data['economy_states']
-        self.health_states = data['health_states']
-        
+        self.name = data['personal_information']['name']
+        self.phone = data['personal_information']['phone']
+        self.age = data['personal_information']['age']
+        self.gender = data['personal_information']['gender']
+        self.merry = data['personal_information']['merry']
+        self.children = data['personal_information']['children']
+        self.religion = data['personal_information']['religion']
+        self.economy_states = data['personal_information']['economy_states']
+        self.health_states = data['personal_information']['health_states']
+        self.living_arrangement = data['personal_information']['living_arrangement']        
 # Specify the path to the JSON file
 info_dir = 'data/user_info.json'
 user = User(info_dir)
@@ -37,7 +35,33 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
 if "sys_prompt" not in st.session_state:
-    st.session_state["sys_prompt"] = f"사용자의 인적정보 = 이름: {user.name}, 나이: {user.age}, 성별: {user.gender}, 학력: {user.education}, 결혼 여부: {user.merry}, 자녀 수: {user.children}, 종교: {user.religion}, 소득: {user.income}, 인지된 경제 상태: {user.economy_states}, 인지된 건강 상태: {user.health_states}" + open("data/prompt_output.txt", "r").read()
+    personal_info="""
+    #설문지 인적 정보 양식
+    본 설문지의 인적 정보의 답변 값에 대한 숫자와 값을 일치시켰습니다. 괄호 안의 값을 참고하세요
+    이름(name) : 00
+    연령(age) : 0(65-74세) / 1(75-84세) / 2(85세 이상)
+    연락처(phone) : 000-0000-0000
+    성별(gender) : male / female
+    결혼 상태(merry) : 0(미혼) / 1(기혼) / 2(이혼/별거) / 3(사별)
+    거주 형태(living_arrangement) : 0(혼자 거주) / 1(동거)
+    자녀 수 (chlidren) : 0(없음) / 2(1-2명) / 3(3명 이상)
+    종교(religion): 1(있음) / 0(없음)
+    지각된 경제 상태(economy_states): 0(나쁨) / 1(보통) / 2(좋음)
+    지각된 건강 상태(health_states): 0(나쁨) / 1(보통) / 2(좋음)
+    """
+    st.session_state["sys_prompt"] = personal_info+f"""
+        사용자의 인적정보 = 이름: {user.name},
+        나이: {user.age}, 
+        성별: {user.gender}, 
+        결혼 여부: {user.merry}, 
+        자녀 수: {user.children}, 
+        종교: {user.religion}, 
+        거주 형태: {user.living_arrangement},
+        인지된 경제 상태: {user.economy_states}, 
+        인지된 건강 상태: {user.health_states},
+        
+        \\
+    """
 
 def stream_data(response):
     for word in response.split(" "):
