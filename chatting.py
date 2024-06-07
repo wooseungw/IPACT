@@ -21,7 +21,7 @@ class User:
         self.health_states = data['personal_information']['health_states']
         self.living_arrangement = data['personal_information']['living_arrangement']        
 # Specify the path to the JSON file
-info_dir = 'data/ipact_personal_main/data3.json'
+info_dir = 'data/ipact_personal_main/data9.json'
 user = User(info_dir)
 
 if "OPENAI_API" not in st.session_state:

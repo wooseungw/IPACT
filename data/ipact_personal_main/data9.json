@@ -3,7 +3,7 @@
     "name": "이병길",
     "phone": "010-2302-5637",
     "age": 1,
-    "genders": "male",
+    "gender": "male",
     "merry": 1,
     "living_arrangement": false,
     "children": 3,
