@@ -60,7 +60,8 @@ if "sys_prompt" not in st.session_state:
         거주 형태: {user.living_arrangement},
         인지된 경제 상태: {user.economy_states}, 
         인지된 건강 상태: {user.health_states},
-        
+        단, 이름은 사용자의 개인정보 보호를 위해 '사용자A'으로 표시해.
+        사용자의 이름을 부를때 '사용자A님'
         \\
     """
     print(st.session_state["sys_prompt"])
